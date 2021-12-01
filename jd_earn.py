@@ -87,7 +87,7 @@ class JdEarn:
                 println('{}, 任务:《{}》今日已完成!'.format(self.account, task['taskName']))
                 continue
 
-            body = {"taskId": task['taskId'], "mpVersion": "3.4.0"}
+            body = {"taskId": task['taskId'], "actionType":0, "taskToken": task['taskToken'], "mpVersion": "3.4.0"}
             if task.get('itemId', None):
                 body['itemId'] = task['itemId']
 
